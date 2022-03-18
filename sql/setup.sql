@@ -76,6 +76,6 @@ CREATE TABLE music (
 INSERT INTO 
 music (song, artist, genre, year)
 VALUES
-    ('Pakala Waters', 'Kolohe Kai', 'Island' 2009),
+    ('Pakala Waters', 'Kolohe Kai', 'Island', 2009),
     ('Karate', 'Kenny', 'pop', 2009),
     ('Time Will only Tell', 'Blxst', 'Hip/hop', 2020);
