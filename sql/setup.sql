@@ -63,3 +63,19 @@ VALUES
     ('Ale', 5, 'light'),
     ('Stout', 4, 'bitter'),
     ('lager', 2, 'light');
+DROP TABLE IF EXISTS music;
+
+CREATE TABLE music (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    song TEXT NOT NULL,
+    artist TEXT NOT NULL,
+    genre TEXT NOT NULL,
+    year INT NOT NULL 
+);
+
+INSERT INTO 
+music (song, artist, genre, year)
+VALUES
+    ('Pakala Waters', 'Kolohe Kai', 'Island' 2009),
+    ('Karate', 'Kenny', 'pop', 2009),
+    ('Time Will only Tell', 'Blxst', 'Hip/hop', 2020);
