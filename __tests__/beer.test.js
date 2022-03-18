@@ -52,5 +52,13 @@ it('should update beer', async () => {
     };
     expect(res.body).toEqual(expected);
     expect(await Beer.getById(beer.id)).toEqual(expected);
+});
+
+it('should delete a beer', async () => {
+    const beer = await Beer.insert({ type: 'fruity', hop: 1, flavor: 'sweet'});
+    const res = await request(app).delete(`/api/v1/beer/${beer.id}`);
+
+    expect(res.body).toEqual(beer);
+    expect(await Beer.getById(beer.id)).toBeNull();
 })
 });
