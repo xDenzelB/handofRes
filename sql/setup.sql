@@ -48,3 +48,18 @@ VALUES
     ('Avengers', 'Kevin Fiege', 2018),
     ('Spiderman', 'Sam Raimi', 2002),
     ('Spiderman 2', 'Sam Raimi', 2004);
+DROP TABLE IF EXISTS beer;
+
+CREATE TABLE beer (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    type TEXT NOT NULL,
+    hop INT NOT NULL,
+    flavor TEXT NOT NULL 
+);
+
+INSERT INTO 
+beer (type, hop, flavor)
+VALUES
+    ('Ale', 5, 'light'),
+    ('Stout', 4, 'bitter'),
+    ('lager', 2, 'light');
