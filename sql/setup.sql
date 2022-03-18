@@ -32,3 +32,19 @@ VALUES
     ('hand tossed', 'pepper jack', 'ham'),
     ('pan pizza', 'mozzarella,', 'sausage'),
     ('pan pizza', 'mozzarella,', 'salami');
+
+DROP TABLE IF EXISTS movies;
+
+CREATE TABLE movies (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    title TEXT NOT NULL,
+    director TEXT NOT NULL,
+    year INT NOT NULL 
+);
+
+INSERT INTO 
+movies (title, director, year)
+VALUES
+    ('Avengers', 'Kevin Fiege', 2018),
+    ('Spiderman', 'Sam Raimi', 2002),
+    ('Spiderman 2', 'Sam Raimi', 2004);
